@@ -9,8 +9,8 @@ F2=xy’z+x’y’z+w’xy+wx’y+wxy
  
  
 ## Equipments Required:
-## Hardware – PCs, Cyclone II , USB flasher
-## Software – Quartus prime
+1.Hardware – PCs, Cyclone II , USB flasher
+2.Software – Quartus prime
 
 
 ## Theory
