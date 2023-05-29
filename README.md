@@ -49,44 +49,36 @@ F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 Program to implement the given logic function and to verify its operations in quartus using Verilog programming.
 Developed by:Harini.M.D
 RegisterNumber: 212222230043
-Using NAND gates:
 
-module NAND(A,B,C,D,F);
+F1= A’B’C’D’+AC’D’+B’CD’+A’BCD+BC’D
+
+module exp2f1(A,B,C,D,f1);
 input A,B,C,D;
-output F;
-wire P,Q,R;
-assign P=(~(~C & B & A));
-assign Q=(~(~D & C & A));
-assign R=(~(C & ~B & A));
-assign F=~(P & Q & R);
+output f1;
+assign f1=(~B&~D)|(A&B&~C)|(~A&B&D);
 endmodule
 
-Using NOR gates:
+F2=xy’z+x’y’z+w’xy+wx’y+wxy
 
-module NOR(A,B,C,D,F);
-input A,B,C,D;
-output F;
-wire P,Q,R,S;
-assign P = (C & ~B & A);
-assign Q = (D & ~C & A);
-assign R = (C & ~B & A);
-assign S = (~(P | Q | R));
-assign F = (~S);
+module exp2(w,x,y,z,f2);
+input w,x,y,z;
+output f2;
+assign f2=(~y&z)|(x&y)|(w&y);
 endmodule
 ```
 ## RTL realization
 
 ## Output:
-# NAND combination
-![image](https://user-images.githubusercontent.com/113497680/233379371-3d19b349-7e87-4d52-a8b3-871961dcfa03.png)
-# NOR combination
-![image](https://user-images.githubusercontent.com/113497680/233379477-5031f158-4e23-40c9-9f9e-314653e7fc92.png)
-# Timing Diagram
-# NAND combination
-![image](https://user-images.githubusercontent.com/113497680/233380509-711505b8-48a3-42f5-9f3f-fd005303c575.png)
-
-# NOR combination
-![image](https://user-images.githubusercontent.com/113497680/233380693-b5220db9-de43-452b-9098-819d9c5542eb.png)
+### RTL
+### F1= A’B’C’D’+AC’D’+B’CD’+A’BCD+BC’D
+![image](https://github.com/harinidq/Experiment--02-Implementation-of-combinational-logic-/assets/113497680/7fd0eeec-e545-4f1c-8d89-63ac784f0128)
+### F2=xy’z+x’y’z+w’xy+wx’y+wxy
+![image](https://github.com/harinidq/Experiment--02-Implementation-of-combinational-logic-/assets/113497680/84a30327-02da-4d31-bb0a-ea5cbd8ff548)
+### Timing Diagram
+### F1= A’B’C’D’+AC’D’+B’CD’+A’BCD+BC’D
+![image](https://github.com/harinidq/Experiment--02-Implementation-of-combinational-logic-/assets/113497680/c9934fa4-fc5d-4382-a6ff-dd98af0c6345)
+### F2=xy’z+x’y’z+w’xy+wx’y+wxy
+![image](https://github.com/harinidq/Experiment--02-Implementation-of-combinational-logic-/assets/113497680/9c2d82cd-54f2-4cd6-b3da-b395e22a792a)
 
 ## Result:
 Thus the given logic functions are implemented using  and their operations are verified using Verilog programming.
