@@ -14,36 +14,21 @@ F2=xy’z+x’y’z+w’xy+wx’y+wxy
 
 
 ## Theory
-Logic gates are electronic circuits which perform logical functions on one or more inputs to produce one output.
-
-# Using NAND gates
-NAND gate is actually a combination of two logic gates i.e. AND gate followed by NOT gate. So its output is complement of the output of an AND gate.This gate can have minimum two inputs, output is always one. By using only NAND gates, we can realize all logic functions: AND, OR, NOT, X-OR, X-NOR, NOR. So this gate is also called as universal gate. First note that the entire expression is inverted and we have three terms ANDed. This means that we must use a 3-input NAND gate. Each of the three terms is, itself, a NAND expression. Finally, negated single terms can be generates with a 2-input NAND gate acting as an inverted.
-
-F=((C'.B.A)'(D'.C.A)'(C.B'.A)')'
-
-# Using NOR gates
-NOR gate is actually a combination of two logic gates: OR gate followed by NOT gate. So its output is complement of the output of an OR gate. This gate can have minimum two inputs, output is always one. By using only NOR gates, we can realize all logic functions: AND, OR, NOT, Ex-OR, Ex-NOR, NAND. So this gate is also called universal gate. Designing a circuit with NOR gates only uses the same basic techniques as designing a circuit with NAND gates; that is, the application of deMorgan’s theorem. The only difference between NOR gate design and NAND gate design is that the former must eliminate product terms and the later must eliminate sum terms.
-
-F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
- 
-
-## Logic Diagram
-![image](https://user-images.githubusercontent.com/113497680/233377544-293c2478-902a-4a55-bd97-1c98181a3fb8.png)
-
+```
+Logic gates are electronic circuits which perform logical functions on one or more inputs to produce one output.Combinational logic gates are digital circuits that produce outputs based solely on the current inputs. These gates are the building blocks for implementing digital systems and are used in a wide range of applications, including arithmetic and logic operations, memory devices, and control circuits.The two functions, F1 and F2, can be implemented using a combination of logic gates such as AND gates, OR gates, and NOT gates.
+```
 ## Procedure
+```
+1.Use module projname(input,output) to start the Verilog programmming.
 
-1.Create a project with required entities.
+2.Assign inputs and outputs using the word input and output respectively.
 
-2.Create a module along with respective file name.
+3.Use defined keywords like wire,assign and required logic gates to represent the boolean expression.
 
-3.Run the respective programs for the given boolean equations.
+4.Use each output(RTL Viewer and Timing Diagram) to represent F1 and F2.
 
-4.Run the module and get the respective RTL outputs.
-
-5.Create university program(VWF) for getting timing diagram.
-
-6.Give the respective inputs for timing diagram and obtain the results.
-
+5.End the verilog program using keyword endmodule.
+```
 ## Program:
 ```
 Program to implement the given logic function and to verify its operations in quartus using Verilog programming.
